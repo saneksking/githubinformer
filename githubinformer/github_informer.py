@@ -8,7 +8,7 @@
 import requests
 
 
-class GithubInformer:
+class GitHubInformer:
 
     def __init__(self, user):
         self._user = user
@@ -29,6 +29,5 @@ class GithubInformer:
     def get_all_info(self):
         return self._data
 
-    def check_repositories_count(self):
+    def get_repositories_count(self):
         return len(self._data)
-w

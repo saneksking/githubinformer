@@ -1,4 +1,4 @@
-# GitHub Informer <sup>v 0.0.1</sup>
+# GitHub Informer <sup>v 0.0.2</sup>
 
 ***
 
@@ -11,16 +11,33 @@
 
 ---
 
-# Short description:
+## Short description:
 GithubInformer --> A library to get data of open users repositories GitHub.
 
 ---
 
-# Author - [Saneksking](https://github.com/saneksking)
+## Author - [Saneksking](https://github.com/saneksking)
 
 ---
 
-# Disclaimer of liability:
+
+***
+
+## Help:
+
+`pip install githubinformer`
+
+```python
+from githubinformer.github_informer import GitHubInformer
+
+github_informer = GitHubInformer(user='saneksking')
+github_informer.get_all_info() # Returns full information about open repositories of user
+github_informer.get_repositories_count() # Returns a count of user open repositories 
+```
+
+***
+
+## Disclaimer of liability:
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
     AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
     IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -34,7 +51,7 @@ GithubInformer --> A library to get data of open users repositories GitHub.
 
 ---
 
-# Copyright:
+## Copyright:
     --------------------------------------------------------
     Licensed under the terms of the BSD 3-Clause License
     (see LICENSE for details).
