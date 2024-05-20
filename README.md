@@ -1,4 +1,4 @@
-# GitHub Informer <sup>v 0.0.2</sup>
+# GitHub Informer <sup>v 0.0.3</sup>
 
 ***
 

@@ -5,4 +5,4 @@
 # All rights reserved.
 # --------------------------------------------------------
 """GitHub informer - A library to get data of open users repositories GitHub."""
-__version__ = '0.0.2'
+__version__ = '0.0.3'

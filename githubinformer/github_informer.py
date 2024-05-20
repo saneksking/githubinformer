@@ -24,7 +24,7 @@ class GitHubInformer:
 
     @property
     def api_url(self):
-        return f'https://api.github.com/users/{self._user}/repos'
+        return f'https://api.github.com/users/{self._user}/repos?per_page=100'
 
     def get_all_info(self):
         return self._data
