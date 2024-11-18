@@ -5,29 +5,40 @@
 # All rights reserved.
 # --------------------------------------------------------
 """GitHub informer"""
-import requests
+import json
+import urllib.request
 
 
 class GitHubInformer:
 
     def __init__(self, user):
         self._user = user
-        self._data = self._init()
+        self._github_repos_data_api = f'https://api.github.com/users/{self._user}/repos?per_page=100'
+        self._repos_data = self.get_github_data(self._github_repos_data_api)
 
-    def _init(self):
-        response = requests.get(self.api_url)
-        if response.status_code == 200:
-            github_data = response.json()
-            return github_data
-        else:
+    @classmethod
+    def get_github_data(cls, url):
+        try:
+            repo_dict = {}
+            req = urllib.request.Request(url)
+            response = urllib.request.urlopen(req)
+            repositories_data = json.loads(response.read())
+            for repository in repositories_data:
+                repo_dict[repository['name']] = repository
+            return repo_dict
+        except Exception as e:
+            print(e)
             return []
 
-    @property
-    def api_url(self):
-        return f'https://api.github.com/users/{self._user}/repos?per_page=100'
+    def get_repo_data(self, name):
+        return self._repos_data[name]
 
-    def get_all_info(self):
-        return self._data
+    @property
+    def github_repos_api_url(self):
+        return self._github_repos_data_api
+
+    def get_github_repos_data(self):
+        return self._repos_data
 
     def get_repositories_count(self):
-        return len(self._data)
+        return len(self._repos_data)
