@@ -1,4 +1,4 @@
-# GitHub Informer <sup>v 0.0.3</sup>
+# GitHub Informer <sup>v 0.0.4</sup>
 
 ***
 
@@ -12,7 +12,7 @@
 ---
 
 ## Short description:
-GithubInformer --> A library to get data of open users repositories GitHub.
+GitHub Informer --> A library to get data of open users repositories GitHub.
 
 ---
 
